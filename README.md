@@ -1,23 +1,6 @@
-# 과연 하네스 엔지니어링이 전부일까?
+# Microsoft Foundry · Harness Engineering · Agent Evaluation Demo
 
 ### 잘 작동하는 Agent에서, **검증 가능한 Agent**로
-
-**Microsoft Foundry · Harness Engineering · Agent Evaluation**
-
-<br/>
-
-`DESIGN` → `MEASURE` → `IMPROVE`
-
-<br/>
-
-[📊 발표자료](slides/harness-engineering-evaluation.pptx)
-&nbsp;&nbsp;·&nbsp;&nbsp;
-[🧭 Demo Runbook](docs/02-portal-demo-runbook.md)
-&nbsp;&nbsp;·&nbsp;&nbsp;
-[🧪 Evaluation Dataset](demo/evaluation-dataset.jsonl)
-&nbsp;&nbsp;·&nbsp;&nbsp;
-[🧯 Recovery Guide](docs/04-recovery-guide.md)
-
 ---
 
 ## About this session
@@ -53,7 +36,7 @@ Instruction을 작성하고, Context와 Knowledge를 제공하고, Tool과 Guard
 - 잔여 휴가 변경
 - 정책에 없는 사실 추측
 
-Tool의 영향을 제거하고 **Instruction 변화 자체가 Agent 행동과 Evaluation 결과에 어떤 영향을 주는지**에 집중합니다.
+이번 데모에서는 Tool의 영향을 제거하고 **Instruction 변화 자체가 Agent 행동과 Evaluation 결과에 어떤 영향을 주는지**에 집중합니다.
 
 ---
 
