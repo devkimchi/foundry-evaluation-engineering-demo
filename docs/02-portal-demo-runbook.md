@@ -1,7 +1,5 @@
 # Portal Demo Runbook
 
-권장 시간: **12–15분**
-
 ## Step 0 — Demo Background
 HR 휴가 정책 안내 Agent 소개.
 
