@@ -1,5 +1,3 @@
-<div align="center">
-
 # 과연 하네스 엔지니어링이 전부일까?
 
 ### 잘 작동하는 Agent에서, **검증 가능한 Agent**로
@@ -19,8 +17,6 @@
 [🧪 Evaluation Dataset](demo/evaluation-dataset.jsonl)
 &nbsp;&nbsp;·&nbsp;&nbsp;
 [🧯 Recovery Guide](docs/04-recovery-guide.md)
-
-</div>
 
 ---
 
