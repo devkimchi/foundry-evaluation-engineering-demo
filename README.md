@@ -13,7 +13,7 @@ Instruction을 작성하고, Context와 Knowledge를 제공하고, Tool과 Guard
 
 > **우리가 설계한 Harness가 실제 사용자 요청에서도 의도한 대로 작동하는지는 어떻게 알 수 있을까요?**
 
-이 저장소는 발표 **「과연 하네스 엔지니어링이 전부일까?」**에서 사용하는 데모와 발표 자산을 공개하기 위한 리포지토리입니다.
+이 저장소는 발표 **과연 하네스 엔지니어링이 전부일까?** 에서 사용하는 데모와 발표 자산을 공개하기 위한 리포지토리입니다.
 
 핵심 메시지는 단순합니다.
 
@@ -66,26 +66,12 @@ Different Instruction
 
 ---
 
-## Demo story
-
-```mermaid
-flowchart LR
-    A[Agent V1] --> B[Evaluation]
-    B --> C[Aggregate Metrics]
-    C --> D[Row-level Failure]
-    D --> E[Reason Analysis]
-    E --> F[Agent V2]
-    F --> G[Re-evaluation]
-    G --> H[V3 / Custom Rubric]
-```
-
 ### 데모에서 확인하는 핵심 장면
 
 1. **Coherence / Relevance는 높지만 TaskCompletion은 낮은 V1**
 2. **TaskAdherence Pass + TaskCompletion Fail**이 동시에 발생하는 권한 밖 요청
 3. V2에서 제약을 강화했지만 **TaskCompletion이 오히려 낮아질 수 있는 이유**
 4. Evaluation의 `Fail`을 그대로 오답으로 보지 않고 **Query · Response · Reason**을 함께 해석하는 과정
-5. Built-in evaluator가 업무 기준을 충분히 표현하지 못할 때 **Custom Rubric**으로 보완하는 방법
 
 ---
 
@@ -93,7 +79,7 @@ flowchart LR
 
 이번 라이브 데모는 **Microsoft Foundry Portal**을 중심으로 진행합니다.
 
-이유는 Agent 생성 자체보다 **평가 지표, row-level response, evaluator reason을 청중과 함께 시각적으로 비교하고 해석하는 것**이 세션의 핵심이기 때문입니다.
+이유는 Agent 생성 자체보다 **평가 지표, row-level response, evaluator reason을 시각적으로 비교하고 해석하는 것**이 세션의 핵심이기 때문입니다.
 
 ### Portal에서 보여주는 흐름
 
@@ -118,43 +104,6 @@ V3 + Custom Rubric
 ```
 
 전체 발표용 시연 순서는 [Portal Demo Runbook](docs/02-portal-demo-runbook.md)에 정리되어 있습니다.
-
----
-
-## Portal screenshots
-
-> 아래 이미지는 실제 발표용 Portal 캡처를 넣는 영역입니다.  
-> `assets/screenshots/`에 동일한 파일명으로 이미지를 추가하면 바로 표시됩니다.
-
-### 1. Agent V1
-
-![Agent V1](assets/screenshots/01-agent-v1.png)
-
-### 2. Evaluation setup
-
-![Evaluation Setup](assets/screenshots/02-evaluation-setup.png)
-
-### 3. V1 aggregate results
-
-![V1 Summary](assets/screenshots/03-v1-summary.png)
-
-### 4. Conflict row — Adherence Pass / Completion Fail
-
-![V1 Conflict Row](assets/screenshots/04-v1-conflict-row.png)
-
-### 5. Agent V2
-
-![Agent V2](assets/screenshots/05-agent-v2.png)
-
-### 6. V2 aggregate results
-
-![V2 Summary](assets/screenshots/06-v2-summary.png)
-
-### 7. V1 vs V2
-
-![V1 vs V2](assets/screenshots/07-v1-v2-comparison.png)
-
-촬영할 화면과 개인정보 가림 기준은 [`assets/screenshots/README.md`](assets/screenshots/README.md)를 참고하세요.
 
 ---
 
@@ -190,55 +139,13 @@ Foundry Resources
 
 ---
 
-## Repository structure
-
-```text
-.
-├── README.md
-├── DEMO_CHEATSHEET.md
-│
-├── slides/
-│   └── harness-engineering-evaluation.pptx
-│
-├── docs/
-│   ├── 00-overview.md
-│   ├── 01-setup.md
-│   ├── 02-portal-demo-runbook.md
-│   ├── 03-result-interpretation.md
-│   └── 04-recovery-guide.md
-│
-├── demo/
-│   ├── hr-policy.md
-│   ├── agent-v1-instruction.txt
-│   ├── agent-v2-instruction.txt
-│   ├── agent-v3-draft.txt
-│   ├── evaluation-dataset.jsonl
-│   └── custom-rubric-example.md
-│
-├── assets/
-│   └── screenshots/
-│       ├── README.md
-│       ├── 01-agent-v1.png
-│       ├── 02-evaluation-setup.png
-│       ├── 03-v1-summary.png
-│       ├── 04-v1-conflict-row.png
-│       ├── 05-agent-v2.png
-│       ├── 06-v2-summary.png
-│       └── 07-v1-v2-comparison.png
-│
-└── scripts/
-    └── validate_dataset.py
-```
-
----
-
 ## Quick start
 
 ### 1. Clone
 
 ```bash
-git clone https://github.com/<YOUR_GITHUB_ID>/<REPOSITORY_NAME>.git
-cd <REPOSITORY_NAME>
+git clone https://github.com/<YOUR_GITHUB_ID>/foundry-agent-evaluation-demo.git
+cd foundry-agent-evaluation-demo
 ```
 
 ### 2. Validate the demo dataset
@@ -256,15 +163,6 @@ OK: 6 rows validated.
 ### 3. Prepare Foundry resources
 
 자세한 준비 순서는 [`docs/01-setup.md`](docs/01-setup.md)를 참고하세요.
-
-발표 전 최소 준비 항목:
-
-- Agent model deployment
-- Judge model deployment
-- `hr-policy-agent-v1`
-- `hr-policy-agent-v2`
-- V1 Evaluation completed
-- V2 Evaluation completed
 
 ---
 
@@ -285,7 +183,7 @@ OK: 6 rows validated.
 
 ---
 
-## V1 → V2 → V3
+## V1 → V2
 
 ### V1 — simple instruction
 
@@ -310,21 +208,6 @@ OK: 6 rows validated.
 - 정보 부족 처리 절차
 
 하지만 제약을 강화하면서 **과도한 거절**이 발생할 수 있습니다.
-
-### V3 — recover helpfulness
-
-V3의 목표는 규칙을 더 많이 추가하는 것이 아닙니다.
-
-```text
-Safety
-   +
-Actionable Next Step
-```
-
-- 확인 가능한 내용을 먼저 설명
-- 수행할 수 없는 부분을 구분
-- 사용자가 취할 구체적인 다음 행동 제공
-- 공식 문서·시스템·담당자 안내
 
 ---
 
@@ -357,39 +240,6 @@ Agent가 권한을 지켰지만 사용자가 요청한 실제 작업은 완료�
 
 ---
 
-## Custom Rubric example
-
-Built-in evaluator만으로 업무 성공 기준을 충분히 표현하기 어려운 경우 업무 특화 Rubric으로 보완할 수 있습니다.
-
-| Criterion | Weight |
-|---|---:|
-| 권한 준수 | 40% |
-| 대안 절차 제공 | 30% |
-| 정책 정확성 | 20% |
-| 명확성 | 10% |
-
-> 이 가중치는 **발표용 예시**이며 Microsoft의 공식 권장 비율이 아닙니다.
-
-전체 예시는 [`demo/custom-rubric-example.md`](demo/custom-rubric-example.md)를 참고하세요.
-
----
-
-## Live demo recovery
-
-라이브 데모에서는 언제든 문제가 생길 수 있습니다.
-
-이 저장소에는 다음 상황에 대한 복구 가이드가 포함되어 있습니다.
-
-- Evaluation 완료가 늦어질 때
-- `429 Rate Limit`
-- Portal UI가 느릴 때
-- 예상과 다른 점수가 나왔을 때
-- Custom Rubric을 라이브로 만들기 어려울 때
-
-→ [`docs/04-recovery-guide.md`](docs/04-recovery-guide.md)
-
----
-
 ## Key takeaways
 
 > **01.** 좋은 모델보다 업무에 맞는 시스템이 중요합니다.
@@ -404,15 +254,6 @@ Built-in evaluator만으로 업무 성공 기준을 충분히 표현하기 어�
 
 ---
 
-## References
-
-- Microsoft Foundry documentation
-- Microsoft Foundry Agent Evaluation documentation
-- Microsoft Foundry Toolkit for VS Code documentation
-- Microsoft Build — system-oriented generative AI development concepts
-
----
-
 ## Disclaimer
 
 이 저장소의 HR 정책과 데이터는 모두 **교육 및 데모 목적의 가상 데이터**입니다.
@@ -421,10 +262,7 @@ Built-in evaluator만으로 업무 성공 기준을 충분히 표현하기 어�
 
 ---
 
-<div align="center">
-
 ### DESIGN → MEASURE → IMPROVE
 
 **Harness는 행동을 설계하고, Evaluation은 그 행동을 검증합니다.**
 
-</div>
