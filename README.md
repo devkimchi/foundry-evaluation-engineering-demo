@@ -1,4 +1,4 @@
-# Microsoft Foundry Portal로 직접 해보는 Agent Instruction Evaluation
+# Microsoft Foundry Portal로 직접 해보는 Agent Evaluation
 
 ### 잘 작동하는 Agent에서, **검증 가능한 Agent**로
 ---
