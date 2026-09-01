@@ -28,5 +28,6 @@ jobs:
         shell: bash
         run: |
           while IFS= read -r line || [ -n "$line" ]; do
-            printf '%s\n' "$line" | jq --exit-status empty
+            [ -z "$line" ] && continue
+            printf '%s\n' "$line" | jq empty
           done < data/evaluation-dataset.jsonl
