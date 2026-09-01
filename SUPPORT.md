@@ -1,21 +1,19 @@
-# Support
+# 지원
 
-This repository is an educational demo, not an official Microsoft support
-channel.
+이 저장소는 교육용 데모이며 Microsoft의 공식 지원 채널이 아닙니다.
 
-## Questions and Documentation Help
+## 질문 및 문서 지원
 
-Search existing issues first. If the answer is not already available, open a
-new issue using the most relevant form and include the affected file or demo
-step. Do not include credentials, tenant details, customer data, or other
-sensitive information.
+먼저 기존 이슈를 검색해 주세요. 답을 찾을 수 없다면 가장 적절한 양식을
+사용하여 새 이슈를 만들고 관련 파일 또는 데모 단계를 포함해 주세요.
+자격 증명, 테넌트 세부 정보, 고객 데이터 또는 기타 민감한 정보는 포함하지
+마세요.
 
-## Microsoft Foundry Product Support
+## Microsoft Foundry 제품 지원
 
-For service incidents, subscription issues, quotas, billing, or product support,
-use the official Microsoft Azure support channels for your organization.
+서비스 장애, 구독 문제, 할당량, 요금 또는 제품 지원은 조직에서 사용하는
+Microsoft Azure 공식 지원 채널을 이용해 주세요.
 
-## Security Reports
+## 보안 신고
 
-Follow [SECURITY.md](SECURITY.md) and do not disclose vulnerabilities in a
-public issue.
+[보안 정책](SECURITY.md)을 따르고 공개 이슈에 취약점을 공개하지 마세요.

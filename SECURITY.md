@@ -1,25 +1,26 @@
-# Security Policy
+# 보안 정책
 
-## Reporting a Vulnerability
+## 취약점 신고
 
-Do not open a public GitHub issue for a suspected security vulnerability.
-Report it privately to **admin (at) devkimchi (dot) com** and include:
+보안 취약점이 의심되는 경우 공개 GitHub 이슈를 만들지 마세요.
+**admin (at) devkimchi (dot) com**으로 비공개 신고하고 다음 내용을
+포함해 주세요.
 
-- A description of the vulnerability
-- Steps to reproduce it
-- The potential impact
-- A suggested remediation, if known
+- 취약점 설명
+- 재현 절차
+- 예상되는 영향
+- 알고 있는 경우 권장 해결 방법
 
-The maintainers will acknowledge the report, investigate it, and coordinate
-disclosure after an appropriate fix or mitigation is available.
+유지 관리자는 신고를 접수하고 조사한 뒤 적절한 수정 또는 완화 조치를
+마련하여 공개 일정을 조율합니다.
 
-## Scope
+## 적용 범위
 
-This repository contains educational documentation, fictional prompts, and
-evaluation data. Reports about exposed credentials, unsafe instructions, or
-dependencies used by repository automation are in scope. General questions and
-documentation corrections should use the public issue forms instead.
+이 저장소에는 교육용 문서, 가상 프롬프트 및 평가 데이터가 포함되어
+있습니다. 노출된 자격 증명, 안전하지 않은 지침 또는 저장소 자동화에
+사용되는 종속성에 관한 신고가 보안 정책의 적용 대상입니다. 일반적인 질문과
+문서 수정 요청은 공개 이슈 양식을 사용해 주세요.
 
-## Supported Versions
+## 지원 범위
 
-Only the latest content on the default branch is supported.
+기본 브랜치의 최신 콘텐츠만 지원합니다.

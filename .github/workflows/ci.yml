@@ -29,4 +29,4 @@ jobs:
         run: |
           while IFS= read -r line || [ -n "$line" ]; do
             printf '%s\n' "$line" | jq --exit-status empty
-          done < demo/evaluation-dataset.jsonl
+          done < data/evaluation-dataset.jsonl

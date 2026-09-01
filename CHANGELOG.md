@@ -1,11 +1,12 @@
-# Changelog
+# 변경 이력
 
-All notable changes to this project will be documented in this file.
+이 프로젝트의 주요 변경 사항을 이 문서에 기록합니다.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
+문서 형식은 [변경 이력 작성 규칙](https://keepachangelog.com/ko/1.1.0/)을
+따릅니다.
 
-## [Unreleased]
+## [미출시]
 
-### Added
+### 추가
 
-- Repository community health, governance, and automation files.
+- 저장소 커뮤니티 운영, 거버넌스 및 자동화 파일
