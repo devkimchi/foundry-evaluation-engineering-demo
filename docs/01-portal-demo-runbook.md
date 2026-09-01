@@ -143,16 +143,16 @@ Model은 V1과 동일하게 유지합니다.
 
 ### Step 2. V1과 V2 비교
 
-| V1 | V2 |
-|---|---|
-| 단순 역할 정의 | 역할과 범위 명시 |
-| 친절·정확 중심 | 작업 절차 명시 |
-| 추측 금지 | 권한 밖 행동 제한 |
-| HR 문의 안내 | 정책 우회 금지 |
-|  | 지침 무시 요청 방어 |
-|  | 허위 완료 금지 |
-|  | 정보 부족 처리 절차 |
-|  | 응답 형식 정의 |
+| V1             | V2                  |
+|----------------|---------------------|
+| 단순 역할 정의 | 역할과 범위 명시    |
+| 친절·정확 중심 | 작업 절차 명시      |
+| 추측 금지      | 권한 밖 행동 제한   |
+| HR 문의 안내   | 정책 우회 금지      |
+|                | 지침 무시 요청 방어 |
+|                | 허위 완료 금지      |
+|                | 정보 부족 처리 절차 |
+|                | 응답 형식 정의      |
 
 ### 🤔Think
 
@@ -251,13 +251,13 @@ V2 ── Evaluation ──┘
 
 Evaluation을 해석하기 전에 Evaluator가 무엇을 보는지 먼저 이해합니다.
 
-| Evaluator | 핵심 질문 |
-|---|---|
-| TaskAdherence | Agent가 지침과 제약을 지켰는가? |
-| TaskCompletion | 사용자가 요청한 작업을 완료했는가? |
-| IntentResolution | 사용자의 실제 목적을 해결했는가? |
-| Relevance | 질문과 관련 있는 답변인가? |
-| Coherence | 논리적이고 자연스러운 답변인가? |
+| Evaluator        | 핵심 질문                          |
+|------------------|------------------------------------|
+| TaskAdherence    | Agent가 지침과 제약을 지켰는가?    |
+| TaskCompletion   | 사용자가 요청한 작업을 완료했는가? |
+| IntentResolution | 사용자의 실제 목적을 해결했는가?   |
+| Relevance        | 질문과 관련 있는 답변인가?         |
+| Coherence        | 논리적이고 자연스러운 답변인가?    |
 
 각 Evaluator는 **서로 다른 질문**을 합니다.
 
@@ -325,7 +325,7 @@ Aggregate Metric은 전체 경향을 보여줍니다.
 
 ### FAIL ≠ WRONG
 
-> `Fail`은 “이 Evaluator가 측정하는 기준을 충족하지 못했다”는 의미입니다.
+> `Fail`은 "이 Evaluator가 측정하는 기준을 충족하지 못했다"는 의미입니다.
 
 `TaskCompletion FAIL`은 요청한 작업이 완료되지 않았다는 뜻이지, Agent가 업무상 잘못 행동했다는 뜻은 아닙니다.
 
@@ -350,7 +350,7 @@ Aggregate Metric은 전체 경향을 보여줍니다.
 과도한 거절 가능성 ↑
 ```
 
-> Evaluation의 목적은 “어느 Instruction이 절대적으로 정답인가?”를 찾는 것이 아닙니다.
+> Evaluation의 목적은 "어느 Instruction이 절대적으로 정답인가?"를 찾는 것이 아닙니다.
 
 목적은 **각 설계가 어떤 장점과 Trade-off를 만드는지 관찰하는 것**입니다.
 
@@ -407,7 +407,7 @@ LLM Judge도 하나의 모델이기 때문입니다.
 예:
 
 ```text
-“휴가 신청이 완료되었습니다.”
+"휴가 신청이 완료되었습니다."
 ```
 
 이 응답은 자연스럽고 관련성이 높아 Coherence와 Relevance가 높게 나올 수 있지만 실제 업무적으로는 위험합니다.
@@ -417,12 +417,12 @@ LLM Judge도 하나의 모델이기 때문입니다.
 그래서 Foundry에서는 Custom Rubric 설계가 가능합니다.
 우리 HR Agent의 성공을 업무 기준으로 직접 정의해봅니다.
 
-| Criterion | Weight |
-|---|---:|
-| 권한 준수 | 40% |
-| 대안 절차 제공 | 30% |
-| 정책 정확성 | 20% |
-| 명확성 | 10% |
+| Criterion      | Weight |
+|----------------|-------:|
+| 권한 준수      | 40%    |
+| 대안 절차 제공 | 30%    |
+| 정책 정확성    | 20%    |
+| 명확성         | 10%    |
 
 > 위 가중치는 교육용 예시이며 공식 권장 수치가 아닙니다.
 > 이번 데모에서는 Custom Rubric에 대한 내용은 다루지 않습니다. 자세한 내용은 [Rubric evaluators 문서](https://learn.microsoft.com/azure/foundry/concepts/evaluation-evaluators/rubric-evaluators?wt.mc_id=studentamb_335845)에서 확인하세요.
@@ -446,8 +446,6 @@ IMPROVE
 Evaluation-led Development
 ```
 
-> **Harness는 Agent의 행동을 설계합니다.**
-
-> **Evaluation은 설계한 행동이 실제로 나타나는지 측정합니다.**
-
-> **좋은 Agent는 잘 구성된 Agent가 아니라, 검증하고 개선할 수 있는 Agent입니다.**
+> - **Harness는 Agent의 행동을 설계합니다.**
+> - **Evaluation은 설계한 행동이 실제로 나타나는지 측정합니다.**
+> - **좋은 Agent는 잘 구성된 Agent가 아니라, 검증하고 개선할 수 있는 Agent입니다.**
