@@ -207,3 +207,11 @@ Agent가 권한을 지켰지만 사용자가 요청한 실제 작업은 완료�
 ### DESIGN → MEASURE → IMPROVE
 
 **Harness는 행동을 설계하고, Evaluation은 그 행동을 검증합니다.**
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
+
+## License
+
+Licensed under the [MIT License](LICENSE).

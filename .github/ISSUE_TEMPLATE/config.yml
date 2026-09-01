@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Support guidance
+    url: https://github.com/devkimchi/foundry-evaluation-engineering-demo/blob/main/SUPPORT.md
+    about: Review support options before opening an issue.

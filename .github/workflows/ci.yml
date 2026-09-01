@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validate-content:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Lint Markdown
+        uses: DavidAnson/markdownlint-cli2-action@v20
+        with:
+          globs: |
+            **/*.md
+
+      - name: Validate evaluation dataset
+        shell: bash
+        run: |
+          while IFS= read -r line || [ -n "$line" ]; do
+            printf '%s\n' "$line" | jq --exit-status empty
+          done < demo/evaluation-dataset.jsonl
